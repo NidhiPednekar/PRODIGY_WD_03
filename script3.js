@@ -1,5 +1,3 @@
-console.log("welcome to  nidhi's tictactoe")
-
 let audioTurn = new Audio('click.mp3')
 let gameover = new Audio('turnover.mp3')
 let win = new Audio('win.wav')
@@ -36,7 +34,7 @@ const checkWin = () => {
 let boxes = document.getElementsByClassName("box");
 Array.from(boxes).forEach(element => {
     let boxtext = element.querySelector(".boxtext");
-    element.addEventListener('click', (e) => {
+    element.addEventListener('click', () => {
         if (boxtext.innerText === '') {
             boxtext.innerText = turn;
             turn = changeTurn();
@@ -49,6 +47,17 @@ Array.from(boxes).forEach(element => {
     })
 })
 
+let reset = document.getElementById('reset');
 
+reset.addEventListener('click', () => {
+    let boxtexts = document.querySelectorAll('.boxtext');
+    Array.from(boxtexts).forEach(element => {
+        element.innerText = "";
+        turn = 'X';
+        gameEnd = false;
+        document.getElementsByClassName('info')[0].innerText = 'Turn for ' + turn;
+        document.querySelector('.img-box img').classList.remove('visible');
 
+    })
+})
 
