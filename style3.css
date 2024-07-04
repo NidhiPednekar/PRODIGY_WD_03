@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Margarine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&display=swap');
 
 *{
 padding: 0;
 margin: 0;
 }
 body {
-    background: radial-gradient(circle, white, rgb(255, 255, 129), rgb(92, 255, 92));
+    background-image: url('bg2.avif');
     width:100%;
     height: 733px;
     background-repeat: no-repeat;
     font-family: "Amatic SC", sans-serif;
+    background-size: cover;
 }
 
 nav{
@@ -22,17 +25,90 @@ nav{
     font-size: 26px;
 }
 
+h3{
+    color:rgb(193, 148, 255) 
+}
 .gameContainer{
-background-color:black;
-display:flex;
-justify-content:center;
-margin-top:50px;
-color:greenyellow
+    display:flex;
+    justify-content:center;
+    margin-top:50px;
+    color:greenyellow;
 }
 
 .container{
-
+    display:grid;
+    grid-template-columns:repeat(3,10vw);
+    grid-template-rows:repeat(3,10vw);
+    font-family: "Margarine", sans-serif;
 }
+
+.box{
+    border:2px solid white;
+    font-size: 8vw;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.box:hover{
+    background-color: rgb(193, 148, 255) ;
+    /* background-color: rgb(255, 128, 255) ; */
+    /* background-color: rgb(20, 237, 245) ; */
+    /* background-color: rgb(31, 210, 207); */
+    color:black;
+    /* rgb(180, 128, 255)  */
+}
+
+.gameInfo{
+    padding:0 44px;
+    font-size: 28px;
+}
+
+.info{
+    padding: 0 20px;
+    font-size: 27xpx;
+    font-weight: bold;
+}
+
+.img-box img{
+    /* width:0;
+    transition:width 1s ease-in-out; */
+    opacity: 0;
+transition: opacity 0.5s ease;
+}
+
+.img-box img.visible {
+    opacity: 1;
+}
+
+.bt-0{
+    border-top:0;
+}
+
+.bb-0{
+    border-bottom:0;
+}
+.bl-0{
+    border-left:0;
+}
+.br-0{
+    border-right:0;
+}
+
+#reset{
+    margin: 0 22px;
+    padding: 7px 15px;
+    background: #b481d1;
+    border-radius: 20px;
+    cursor: pointer; 
+    font-family: "Sue Ellen Francisco", cursive;
+    font-size:20px;
+    width:80px;
+}
+
+
+
 
 
 
