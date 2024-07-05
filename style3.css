@@ -13,6 +13,7 @@ body {
     background-repeat: no-repeat;
     font-family: "Amatic SC", sans-serif;
     background-size: cover;
+    justify-content:center;
 }
 
 nav{
@@ -26,8 +27,9 @@ nav{
 }
 
 h3{
-    color:rgb(193, 148, 255) 
+    color:rgb(193, 148, 255);
 }
+
 .gameContainer{
     display:flex;
     justify-content:center;
@@ -40,6 +42,7 @@ h3{
     grid-template-columns:repeat(3,10vw);
     grid-template-rows:repeat(3,10vw);
     font-family: "Margarine", sans-serif;
+    position: relative;
 }
 
 .box{
@@ -53,29 +56,31 @@ h3{
 
 .box:hover{
     background-color: rgb(193, 148, 255) ;
-    /* background-color: rgb(255, 128, 255) ; */
-    /* background-color: rgb(20, 237, 245) ; */
-    /* background-color: rgb(31, 210, 207); */
     color:black;
-    /* rgb(180, 128, 255)  */
 }
 
 .gameInfo{
-    padding:0 44px;
+    padding:0 54px;
     font-size: 28px;
 }
 
+.gameInfo h1{
+    font-size: 2.5rem;
+}
+
 .info{
-    padding: 0 20px;
-    font-size: 27xpx;
+    font-size: 37xpx;
     font-weight: bold;
+    COLOR:WHITE;
 }
 
 .img-box img{
-    /* width:0;
-    transition:width 1s ease-in-out; */
     opacity: 0;
-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    height:200px;
+    width:200px;
+    margin-top:20px;
+    border-radius: 5px;
 }
 
 .img-box img.visible {
@@ -89,9 +94,11 @@ transition: opacity 0.5s ease;
 .bb-0{
     border-bottom:0;
 }
+
 .bl-0{
     border-left:0;
 }
+
 .br-0{
     border-right:0;
 }
@@ -105,10 +112,30 @@ transition: opacity 0.5s ease;
     font-family: "Sue Ellen Francisco", cursive;
     font-size:20px;
     width:80px;
+    font-weight:bolder;
 }
 
+@media screen and (max-width: 900px){
+    .gameContainer{
+        flex-wrap:wrap;
+    }
+    .gameInfo{
+        margin-top:34px;
+    }
+    .gameInfo h1{
+        font-size:1.5rem
+    }
+    .container{
+        display:grid;
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+    }
+}
 
-
-
-
-
+.line{
+    background-color: rgb(245, 56, 56);
+    height:3px;
+    width:0;
+    transition:width 1s ease-in-out;
+    position:absolute;
+}
